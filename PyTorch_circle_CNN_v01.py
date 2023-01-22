@@ -135,8 +135,8 @@ def main():
             out = torch.flatten(out, 1)
             out = F.leaky_relu(self.l1(out))
             out = F.leaky_relu(self.l2(out))
-            # out = self.sig(self.l3(out))
-            out = self.l3(out)
+            out = 3 * self.sig(self.l3(out))
+            # out = self.l3(out)
             return out
 
     circle_data = CircleDataSets()
