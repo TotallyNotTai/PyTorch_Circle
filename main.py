@@ -7,8 +7,8 @@ import Hough_Transformation
 
 PyTorch_circle_ANN.none()
 PyTorch_circle_CNN.none()
-PyTorch_circle_CNN_v01.none()
+PyTorch_circle_CNN_v01.main()
 testing.none()
 testing_random.none()
 
-Hough_Transformation.main()
+Hough_Transformation.none()

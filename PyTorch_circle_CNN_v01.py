@@ -4,13 +4,15 @@ import torch.nn.functional as F
 from torch.utils.data import Dataset
 import numpy as np
 
+# most likely a dead end, no good results
+
 
 def main():
     # values
     # num_data_files = 10000
     # num_ref_files = 200
-    data_x = 50
-    data_y = 50
+    data_x = 30
+    data_y = 30
     conv_kernel_size = 3
     conv_layer_size_1 = 4
     conv_layer_size_2 = 16
@@ -135,7 +137,7 @@ def main():
             out = torch.flatten(out, 1)
             out = F.leaky_relu(self.l1(out))
             out = F.leaky_relu(self.l2(out))
-            out = 3 * self.sig(self.l3(out))
+            out = self.sig(self.l3(out))
             # out = self.l3(out)
             return out
 
@@ -221,10 +223,6 @@ def main():
                         predictions = 0
                     elif 1.5 >= output[i][j] >= 0.5:
                         predictions = 1
-                    elif 2.5 >= output[i][j] >= 1.5:
-                        predictions = 2
-                    elif 3.5 >= output[i][j] >= 2.5:
-                        predictions = 3
                     else:
                         predictions = -1
 

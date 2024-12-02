@@ -148,7 +148,7 @@ def main():
     test_data = CircleReferenceDataSets()
     print("CircleRefSet loaded")
 
-    print(circle_data.data)
+    # print(circle_data.data)
 
     # circle_data.data = nn.Flatten()(circle_data.data)
     # test_data.data = nn.Flatten()(test_data.data)
@@ -182,7 +182,7 @@ def main():
         for i, (circles, labels) in enumerate(final_circle_datas):
             # circles = circles.view(circles.size(0), -1)
 
-            print(circles)
+            # print(circles)
 
             optimizer.zero_grad()
 
